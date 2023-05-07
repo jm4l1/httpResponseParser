@@ -49,6 +49,23 @@ namespace HTTP
 		};
 	}  // namespace Private
 
+	std::string StatusLine::string() const
+	{
+		return version + " " + status_code + " " + reason_phrase;
+	}
+	void StatusLine::summary() const
+	{
+		std::regex version_regex(R"(([Hh][Tt].[Pp])/(\d.\d))");
+		std::smatch version_match;
+		std::regex_match(version, version_match, version_regex);
+		std::cout << "HTTP version: " << version_match[2] << "\n";
+		std::cout << "Status: " << status_code << "\n";
+	}
+
+	std::string Header::string() const
+	{
+		return name + ":" + value;
+	}
 	void Parser::parse(const std::string& buffer)
 	{
 		flush();
@@ -99,7 +116,12 @@ namespace HTTP
 						  });
 		}
 	}
-
+	void Parser::show_summary() const
+	{
+		status_line.summary();
+		std::cout << "Number of valid headers: " << number_of_valid_headers() << "\n";
+		std::cout << "Number of invalid headers: " << number_of_invalid_headers() << "\n";
+	}
 	void Parser::flush()
 	{
 		valid_headers.clear();

@@ -24,7 +24,26 @@ Currently supports building on Linux and MacOs.
 2. run the command`./build_install.sh`
 
 ## Run tests
-- `./bin/tests`
+```bash
+./bin/tests
+===============================================================================
+All tests passed (7 assertions in 1 test case)
+```
 
 ## Run parser
-- `./bin/httpResponseParser`
+```bash
+> ./bin/httpResponseParser
+Paste header to be parsed
+Press Enter twice to stop entry:
+HTTP/1.0 200 OK
+cache-control: public
+content-length: 0
+content-type: image/svg+xml
+date: Tue, 22 Jun 2021 22:24:42 GMTline - HTTP/1.0 200 OK
+
+
+HTTP version: 1.0
+Status: 200
+Number of valid headers: 4
+Number of invalid headers: 0
+```
