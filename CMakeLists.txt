@@ -11,8 +11,8 @@ set(CMAKE_BUILD_TYPE Debug)
 
 add_subdirectory(tests)
 
-include_directories(include "lib/jjson/include")
-file(GLOB SOURCES "src/*.cpp" "lib/jjson/src/*.cpp")
+include_directories(include)
+file(GLOB SOURCES "src/*.cpp")
 
 add_executable(${project} main.cpp ${SOURCES})
 

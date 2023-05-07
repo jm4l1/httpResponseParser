@@ -6,9 +6,9 @@ set(this tests)
 
 project(${this} C CXX)
 
-file(GLOB SOURCES "src/*.cpp")
+file(GLOB SOURCES "src/*.cpp" "../src/*.cpp")
 
-add_executable(${this} ${SOURCES} "lib/catch.hpp")
+add_executable(${this} ${SOURCES})
 
 include_directories(include "../include")
 
@@ -16,8 +16,4 @@ set_target_properties(${this} PROPERTIES FOLDER tests)
 
 target_include_directories(${this} PRIVATE)
 
-add_test(
-    NAME ${this}
-    COMMAND ${this}
-)
 install(TARGETS ${this})
