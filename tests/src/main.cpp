@@ -5,6 +5,6 @@
 TEST_CASE("Dummy case")
 {
 	{
-		REQUIRE(TRUE);
+		REQUIRE(true);
 	}
 }

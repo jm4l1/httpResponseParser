@@ -19,3 +19,12 @@ value
 ## Supported Operated Systems
 Currently supports building on Linux and MacOs.
 
+## Build Instructions
+1. Clone this repo.
+2. run the command`./build_install.sh`
+
+## Run tests
+- `./bin/tests`
+
+## Run parser
+- `./bin/httpResponseParser`

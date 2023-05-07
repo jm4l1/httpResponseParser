@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.25)
+
+set(project httpResponseParser)
 project(httpResponseParser)
 
 add_definitions(-std=c++20)
@@ -13,3 +15,5 @@ include_directories(include)
 file(GLOB SOURCES "src/*.cpp")
 
 add_executable(${project} main.cpp ${SOURCES})
+
+install(TARGETS ${project})

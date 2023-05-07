@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.25)
 
 add_definitions(-std=c++20)
 
@@ -20,3 +20,4 @@ add_test(
     NAME ${this}
     COMMAND ${this}
 )
+install(TARGETS ${this})
