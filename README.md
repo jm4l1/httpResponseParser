@@ -23,7 +23,7 @@ Currently supports building on Linux and MacOs.
 ```bash
 ./bin/tests
 ===============================================================================
-All tests passed (7 assertions in 1 test case)
+All tests passed (17 assertions in 1 test case)
 ```
 
 ## Run parser
