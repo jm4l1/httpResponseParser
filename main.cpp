@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 
 	HTTP::Parser parser;
 
-	std::cout << "Paste header to be parsed\nPress Enter twice to stop entry:\n";
+	std::cout << "Paste header to be parsed\nEnter two blank lines to stop entry:\n";
 	while (number_of_newlines < 2)
 	{
 		std::getline(std::cin, line);
