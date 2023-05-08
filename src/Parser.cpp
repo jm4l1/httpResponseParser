@@ -42,9 +42,8 @@ namespace HTTP
 			std::istringstream header_line_stream(buffer);
 			std::getline(header_line_stream, header.name, ':');
 			std::getline(header_line_stream, header.value);
-			std::regex header_regex("[^A-Za-z0-9-]");
-			std::smatch header_match;
-			header.is_valid = header.name != "" && !std::regex_match(header.name, header_match, header_regex) && header.value != "";
+			std::regex header_regex("[^A-Za-z0-9-]+");
+			header.is_valid = header.name != "" && !std::regex_search(header.name, header_regex) && header.value != "";
 			return header;
 		};
 	}  // namespace Private
@@ -61,7 +60,6 @@ namespace HTTP
 		std::cout << "HTTP version: " << version_match[2] << "\n";
 		std::cout << "Status: " << status_code << "\n";
 	}
-
 	std::string Header::string() const
 	{
 		return name + ":" + value;
