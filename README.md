@@ -15,6 +15,19 @@ This is a basic implementation of an Hypertext Transfer Protocol (HTTP) parser. 
 ## Supported Operated Systems
 Currently supports building on Linux and MacOs.
 
+## Dependencies for Running Locally
+* cmake >= 3.7
+  * All OSes: [click here for installation instructions](https://cmake.org/install/)
+* make >= 4.1 (Linux, Mac)
+  * Linux: make is installed by default on most Linux distros
+  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)packages/make.html)
+* Compiler supporting implementation of `std::filesystem`
+  * gcc/g++ >= 9.3
+    * Linux: gcc / g++ is installed by default on most Linux distros
+    * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
+  * clang >= 9.3
+* Json parsing library [jm4l1/jjson](https://github.com/jm4l1/jjson)
+
 ## Build Instructions
 1. Clone this repo.
 2. run the command`./build_install.sh`
